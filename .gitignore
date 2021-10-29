@@ -1,1 +1,3 @@
-logs.txt
+/logs.txt
+*.txt
+hello/
