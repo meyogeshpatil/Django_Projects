@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shadow Silks </title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/feesback.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1><strong><em>Thanks Giving..</em></strong></h1>
+        <p><strong><em>Thanks for doing business with us.Feel free to share your experience with us. It will really helps to grow us and improve our service deliecery.Thanks in advance for your valuable time.</em></strong></p>
+
+
+      </div>
+
+    </div>
+<form method="post">
+{{a}}
+{% csrf_token %}
+<input type="submit" name="" value="Submit">
+</form>
+
+  </body>
+</html>

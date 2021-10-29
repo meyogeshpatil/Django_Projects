@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shadow Silks </title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1><strong><em>Our Product range</em></strong></h1>
+        <p><strong><em>Buying tip:Silk products are handmade and this products has lots of import dependancies so prices are tend to fluctuate. </em></strong></p>
+      </div>
+    </div>
+
+    {% if item_list %}
+        <table>
+          <thead id="abc">
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product description</th>
+            <th>Product price</th>
+
+          </thead>
+          {% for i in item_list %}
+          <tr id="abc">
+            <td>{{i.id}}</td>
+            <td>{{i.product}}</td>
+            <td>{{i.desc}}</td>
+            <td>{{i.price}}</td>
+
+          </tr>
+          {% endfor %}
+        </table>
+        {% else %}
+        <p id='abc'>No product found</p>
+      {% endif %}
+  </body>
+</html>
